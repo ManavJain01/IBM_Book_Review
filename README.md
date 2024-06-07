@@ -12,12 +12,15 @@ Node.js: Ensure you have Node.js installed on your system. You can download it f
 
 # Installation
   1.Clone the repository:
+  
     git clone <repository-url>
   
   2.Navigate to the project folder:
+  
     cd <project-folder>
 
   3.Install dependencies:
+  
     npm install
 
 # Start the application:
