@@ -18,11 +18,9 @@ router.get('/isbn/:isbn',function (req, res) {
 
 // Get book details based on author
 router.get('/author/:author',function (req, res) {
-    a = res.send(JSON.stringify({books}, null, 4));
-    JSON.parse(a);
-    // const author = req.params.author;
-    // a = Object.keys(books).filter(books[key][author] == req.params.author)
-    // console.log(a);
+    const author = req.params.author;
+    const filteredData = Object.values(books).filter(e => e.author === author);
+    res.send(filteredData)
 });    
 
 
@@ -31,10 +29,8 @@ router.get('/author/:author',function (req, res) {
 
 router.get('/title/:title',function (req, res) {
     const title = req.params.title;
-    var books_based_on_title = JSON.parse(books).filter(function (book) {
-        return book.title === req.params.title;
-    });
-
+    const filteredData = Object.values(books).filter(e => e.title === title);
+    res.send(filteredData)
 });
 
 
@@ -42,7 +38,7 @@ router.get('/title/:title',function (req, res) {
 
 router.get('/review/:isbn',function (req, res) {
     const isbn = req.params.isbn;
-    res.send(books[isbn]["reviews"])
+    res.send(books[isbn].reviews)
 });
 
 
