@@ -26,7 +26,6 @@ router.get('/author/:author',function (req, res) {
 
 
 // Get all books based on title
-
 router.get('/title/:title',function (req, res) {
     const title = req.params.title;
     const filteredData = Object.values(books).filter(e => e.title === title);
@@ -35,7 +34,6 @@ router.get('/title/:title',function (req, res) {
 
 
 //  Get book review
-
 router.get('/review/:isbn',function (req, res) {
     const isbn = req.params.isbn;
     res.send(books[isbn].reviews)
