@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 // Importing Local files
 import DataBySearch from './components/DataBySearch'
 import Card from './components/Card'
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 function App() {
@@ -37,8 +38,8 @@ function App() {
 
   return (
     <div className="min-h-lvh p-5 flex flex-col gap-10 justify-around bg-black text-white">
-      <h1 className="text-4xl text-center">Book Reviews</h1>
-
+      <Navbar />
+      
       {/* All Books Reviews */}
       <div className="px-10 flex flex-wrap gap-10">
         {
